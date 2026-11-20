@@ -21,6 +21,8 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
 
       # 仓库里没有提交 gradlew/gradle-wrapper.jar 二进制,
       # 用这个 action 直接把 Gradle 装进 PATH,免去手动生成 wrapper。
